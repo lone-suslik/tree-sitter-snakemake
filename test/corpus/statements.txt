@@ -94,7 +94,7 @@ Future import statements
 ================================================================================
 
 from __future__ import print_statement
-from __future__ import python4
+from __future__ import snakemake4
 from __future__ import (absolute_import, division, print_function,
                         unicode_literals)
 --------------------------------------------------------------------------------
@@ -586,9 +586,9 @@ with (open('d') as d,
 with e as f, g as h,:
   i
 
---------------------------------------------------------------------------------
+ --------------------------------------------------------------------------------
 
-(module
+b(module
   (with_statement
     (with_clause
       (with_item
@@ -880,7 +880,7 @@ def h(*a):
 Empty blocks
 ================================================================================
 
-# These are not actually valid python; blocks
+# These are not actually valid snakemake; blocks
 # must contain at least one statement. But we
 # allow them because error recovery for empty
 # blocks doesn't work very well otherwise.

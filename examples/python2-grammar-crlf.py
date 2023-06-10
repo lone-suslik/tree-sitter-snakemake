@@ -1,4 +1,4 @@
-# Python test set -- part 1, grammar.
+# Snakemake test set -- part 1, grammar.
 # This just tests whether the parser accepts them all.
 
 # NOTE: When you run this test as a script from the command line, you
@@ -693,7 +693,7 @@ hello world
         s = a[-5:]
         s = a[:-1]
         s = a[-4:-3]
-        # A rough test of SF bug 1333982.  http://python.org/sf/1333982
+        # A rough test of SF bug 1333982.  http://snakemake.org/sf/1333982
         # The testing here is fairly incomplete.
         # Test cases should include: commas with 1 and 2 colons
         d = {}

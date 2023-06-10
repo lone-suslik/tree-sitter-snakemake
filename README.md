@@ -1,7 +1,7 @@
-tree-sitter-python
+tree-sitter-snakemake
 ==================
 
-[![build](https://github.com/tree-sitter/tree-sitter-python/actions/workflows/ci.yml/badge.svg)](https://github.com/tree-sitter/tree-sitter-python/actions/workflows/ci.yml)
+[![build](https://github.com/tree-sitter/tree-sitter-snakemake/actions/workflows/ci.yml/badge.svg)](https://github.com/tree-sitter/tree-sitter-snakemake/actions/workflows/ci.yml)
 
 Snakemake grammar for [tree-sitter][].
 
@@ -9,5 +9,5 @@ Snakemake grammar for [tree-sitter][].
 
 #### References
 
-* [Snakemake 2 Grammar](https://docs.python.org/2/reference/grammar.html)
-* [Snakemake 3 Grammar](https://docs.python.org/3/reference/grammar.html)
+* [Snakemake 2 Grammar](https://docs.snakemake.org/2/reference/grammar.html)
+* [Snakemake 3 Grammar](https://docs.snakemake.org/3/reference/grammar.html)

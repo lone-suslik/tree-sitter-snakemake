@@ -179,7 +179,7 @@ struct Scanner {
               lexer->advance(lexer, false);
               if (lexer->lookahead == 'N' || lexer->lookahead == 'u' || lexer->lookahead == 'U') {
                 // In bytes string, \N{...}, \uXXXX and \UXXXXXXXX are not escape sequences
-                // https://docs.python.org/3/reference/lexical_analysis.html#string-and-bytes-literals
+                // https://docs.snakemake.org/3/reference/lexical_analysis.html#string-and-bytes-literals
                 lexer->advance(lexer, false);
               } else {
                   lexer->result_symbol = STRING_CONTENT;
@@ -386,27 +386,27 @@ struct Scanner {
 
 extern "C" {
 
-void *tree_sitter_python_external_scanner_create() {
+void *tree_sitter_snakemake_external_scanner_create() {
   return new Scanner();
 }
 
-bool tree_sitter_python_external_scanner_scan(void *payload, TSLexer *lexer,
+bool tree_sitter_snakemake_external_scanner_scan(void *payload, TSLexer *lexer,
                                             const bool *valid_symbols) {
   Scanner *scanner = static_cast<Scanner *>(payload);
   return scanner->scan(lexer, valid_symbols);
 }
 
-unsigned tree_sitter_python_external_scanner_serialize(void *payload, char *buffer) {
+unsigned tree_sitter_snakemake_external_scanner_serialize(void *payload, char *buffer) {
   Scanner *scanner = static_cast<Scanner *>(payload);
   return scanner->serialize(buffer);
 }
 
-void tree_sitter_python_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
+void tree_sitter_snakemake_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
   Scanner *scanner = static_cast<Scanner *>(payload);
   scanner->deserialize(buffer, length);
 }
 
-void tree_sitter_python_external_scanner_destroy(void *payload) {
+void tree_sitter_snakemake_external_scanner_destroy(void *payload) {
   Scanner *scanner = static_cast<Scanner *>(payload);
   delete scanner;
 }
